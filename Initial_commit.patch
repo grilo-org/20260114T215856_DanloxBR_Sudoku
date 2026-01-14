@@ -1,0 +1,154 @@
+Subject: [PATCH] Initial commit
+---
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/.gitignore	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,38 @@
++target/
++!.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**/target/
++!**/src/test/**/target/
++
++### IntelliJ IDEA ###
++.idea/modules.xml
++.idea/jarRepositories.xml
++.idea/compiler.xml
++.idea/libraries/
++*.iws
++*.iml
++*.ipr
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++!**/src/main/**/build/
++!**/src/test/**/build/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/.idea/.gitignore	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/pom.xml	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,25 @@
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++  <modelVersion>4.0.0</modelVersion>
++
++  <groupId>org.example</groupId>
++  <artifactId>sudoku</artifactId>
++  <version>1.0-SNAPSHOT</version>
++  <packaging>jar</packaging>
++
++  <name>sudoku</name>
++  <url>http://maven.apache.org</url>
++
++  <properties>
++    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++  </properties>
++
++  <dependencies>
++    <dependency>
++      <groupId>junit</groupId>
++      <artifactId>junit</artifactId>
++      <version>3.8.1</version>
++      <scope>test</scope>
++    </dependency>
++  </dependencies>
++</project>
+Index: src/main/java/com/bringto/dio/Main.java
+===================================================================
+diff --git a/src/main/java/com/bringto/dio/Main.java b/src/main/java/com/bringto/dio/Main.java
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/src/main/java/com/bringto/dio/Main.java	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,4 @@
++package com.dio;
++
++public class Main {
++}
+Index: src/main/java/com/bringto/dio/model/Board.java
+===================================================================
+diff --git a/src/main/java/com/bringto/dio/model/Board.java b/src/main/java/com/bringto/dio/model/Board.java
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/src/main/java/com/bringto/dio/model/Board.java	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,4 @@
++package com.bringto.dio.model;
++
++public class Board {
++}
+Index: src/main/java/com/bringto/dio/model/GameStatusEnum.java
+===================================================================
+diff --git a/src/main/java/com/bringto/dio/model/GameStatusEnum.java b/src/main/java/com/bringto/dio/model/GameStatusEnum.java
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/src/main/java/com/bringto/dio/model/GameStatusEnum.java	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,4 @@
++package com.bringto.dio.model;
++
++public enum GameStatusEnum {
++}
+Index: src/main/java/com/bringto/dio/model/Space.java
+===================================================================
+diff --git a/src/main/java/com/bringto/dio/model/Space.java b/src/main/java/com/bringto/dio/model/Space.java
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/src/main/java/com/bringto/dio/model/Space.java	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,4 @@
++package com.bringto.dio.model;
++
++public class Space {
++}
+Index: src/main/java/com/bringto/dio/util/BoardTemplate.java
+===================================================================
+diff --git a/src/main/java/com/bringto/dio/util/BoardTemplate.java b/src/main/java/com/bringto/dio/util/BoardTemplate.java
+new file mode 100644
+--- /dev/null	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
++++ b/src/main/java/com/bringto/dio/util/BoardTemplate.java	(revision c73f01160983f7b3f0872f2ef849b80417b99a27)
+@@ -0,0 +1,4 @@
++package com.bringto.dio.util;
++
++public class BoardTemplate {
++}
